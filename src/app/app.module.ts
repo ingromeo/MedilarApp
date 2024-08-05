@@ -45,6 +45,8 @@ import { AppointmentsViewComponent } from './screens/appointments-view/appointme
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { MaterialModule } from 'src/material.module';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { MainComponent } from './main/main.component';
+import {AuthComponent} from "./auth/auth/auth.component";
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     PaymentsComponent,
     AppointmentsViewComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    MainComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

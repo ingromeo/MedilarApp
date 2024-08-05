@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import {FormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
+import {MaterialModule} from "../../material.module";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatDialogModule} from "@angular/material/dialog";
         MatDividerModule,
         MatButtonModule,
         FormsModule,
-      MatDialogModule
+      MatDialogModule,
+      MaterialModule
     ]
 })
 export class AuthModule { }

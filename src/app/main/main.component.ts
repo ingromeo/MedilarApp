@@ -14,7 +14,7 @@ import { ActivatedRoute, Router, ActivationEnd } from '@angular/router';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class AppComponent implements OnDestroy, OnInit {
+export class MainComponent implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
   // @ViewChild('sidenav', { static: false }) sidenav: MatSidenav | undefined;

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/*import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppointmentsComponent } from './screens/appointments/appointments.component';
 import { AppointmentsViewComponent } from './screens/appointments-view/appointments-view.component';
@@ -15,21 +15,13 @@ import { PatientsViewComponent } from './screens/patients-view/patients-view.com
 import { PaymentsComponent } from './screens/payments/payments.component';
 import { PaymentsViewComponent } from './screens/payments-view/payments-view.component';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
-import { AuthComponent } from './auth/auth/auth.component';
-import { ForgotComponent } from './auth/forgot/forgot.component';
-import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [
-  { path:'', redirectTo:'/login', pathMatch:'full'},
-  { path:'login', component: AuthComponent },
-  { path:'forgot', component: ForgotComponent },
-  { path:'register', component: RegisterComponent },
-
-  /*{
+  {
     path: '',
     component: DashboardComponent,
     data: { title: 'Dashboard' }
-  },*/
+  },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -148,3 +140,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+*/
