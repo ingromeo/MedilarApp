@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-3">
-      <mat-card class="stats-card" [routerLink]="['/appointments']">
+      <mat-card class="stats-card" [routerLink]="['/dashboard/screens/appointments']">
         <mat-card-header>
           <mat-card-title-group>
             <mat-card-title>Appointments</mat-card-title>
@@ -16,7 +16,7 @@
       </mat-card>
     </div>
     <div class="col-3">
-      <mat-card class="stats-card" [routerLink]="['/patients']">
+      <mat-card class="stats-card" [routerLink]="['/dashboard/screens/patients']">
         <mat-card-header>
           <mat-card-title-group>
             <mat-card-title>Patients</mat-card-title>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="col-3">
-      <mat-card class="stats-card" [routerLink]="['/room-allotment']">
+      <mat-card class="stats-card" [routerLink]="['/dashboard/screens/room-allotment']">
         <mat-card-header>
           <mat-card-title-group>
             <mat-card-title>room-allotment</mat-card-title>
@@ -47,7 +47,7 @@
       </mat-card>
     </div>
     <div class="col-3">
-      <mat-card class="stats-card" [routerLink]="['/payments']">
+      <mat-card class="stats-card" [routerLink]="['/dashboard/screens/payments']">
         <mat-card-header>
           <mat-card-title-group>
             <mat-card-title>Payments</mat-card-title>
@@ -149,7 +149,7 @@
                   <button
                     mat-icon-button
                     color="primary"
-                    [routerLink]="['/appointments', element.id]"
+                    [routerLink]="['/dashboard/screens/appointments', element.id]"
                   >
                     <mat-icon>edit</mat-icon>
                   </button>

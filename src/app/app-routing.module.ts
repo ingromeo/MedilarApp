@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AppointmentsComponent } from './screens/appointments/appointments.component';
 import { AppointmentsViewComponent } from './screens/appointments-view/appointments-view.component';
 import { DoctorsComponent } from './screens/doctors/doctors.component';
@@ -18,18 +18,29 @@ import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { AuthComponent } from './auth/auth/auth.component';
 import { ForgotComponent } from './auth/forgot/forgot.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'/login', pathMatch:'full'},
   { path:'login', component: AuthComponent },
   { path:'forgot', component: ForgotComponent },
   { path:'register', component: RegisterComponent },
+  { path: 'dashboard', component: MainComponent,
+    data: { title: 'Dashboard' },
+    children: [
+      {
+        path: 'screens',
+        loadChildren: () => import('./screens/screens.module')
+          .then(m => m.ScreensModule)
+      }
+    ]
+  }
 
   /*{
     path: '',
     component: DashboardComponent,
     data: { title: 'Dashboard' }
-  },*/
+  },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -140,11 +151,11 @@ const routes: Routes = [
     path: 'payments/:id',
     component: PaymentsViewComponent,
     data: { title: 'Update payments' }
-  }
+  }*/
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

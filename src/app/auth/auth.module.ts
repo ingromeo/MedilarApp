@@ -16,7 +16,7 @@ import {MaterialModule} from "../../material.module";
 
 @NgModule({
   declarations: [
-    AuthComponent,
+    //AuthComponent,
     RegisterComponent,
     ForgotComponent
   ],

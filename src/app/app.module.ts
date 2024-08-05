@@ -47,6 +47,9 @@ import { MaterialModule } from 'src/material.module';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MainComponent } from './main/main.component';
 import {AuthComponent} from "./auth/auth/auth.component";
+import {AuthModule} from "./auth/auth.module";
+import {ScreensModule} from "./screens/screens.module";
+import {MainModule} from "./main/main.module";
 
 @NgModule({
   declarations: [
@@ -78,7 +81,10 @@ import {AuthComponent} from "./auth/auth/auth.component";
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    MaterialModule
+    MaterialModule,
+    AuthModule,
+    ScreensModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -31,6 +31,11 @@ export class MainComponent implements OnDestroy, OnInit {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
+  logOut() {
+    //this.auth.logout({ logoutParams: {returnTo: this.doc.location.origin} });
+    this.router.navigateByUrl('/login');
+  }
+
   ngOnInit() {
     // Get page title
     this.router.events.subscribe((event: any) => {

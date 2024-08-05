@@ -44,7 +44,7 @@
       </button>
       <button mat-menu-item>
         <mat-icon>logout</mat-icon>
-        <span>Logout</span>
+        <span><a (click)="logOut();">Logout</a></span>
       </button>
     </mat-menu>
     <!-- End icons links -->
@@ -80,10 +80,10 @@
           <span>Appointments</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item [routerLink]="'/appointments'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/appointments'">
             <span>Appointments list</span>
           </a>
-          <a mat-list-item [routerLink]="'/appointments/new'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/appointments/new'">
             <span>New Appointment</span>
           </a>
         </mat-nav-list>
@@ -101,10 +101,10 @@
           <span>Doctors</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item [routerLink]="'/doctors'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/doctors'">
             <span>Doctors list</span>
           </a>
-          <a mat-list-item [routerLink]="'/doctors/new'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/doctors/new'">
             <span>New Doctor</span>
           </a>
         </mat-nav-list>
@@ -122,10 +122,10 @@
           <span>Departments</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item [routerLink]="'/departments'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/departments'">
             <span>Departments list</span>
           </a>
-          <a mat-list-item [routerLink]="'/departments/new'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/departments/new'">
             <span>New Departments</span>
           </a>
         </mat-nav-list>
@@ -143,10 +143,10 @@
           <span>Staff</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item [routerLink]="'/staff'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/staff'">
             <span>Staff list</span>
           </a>
-          <a mat-list-item [routerLink]="'/staff/new'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/staff/new'">
             <span>New Staff</span>
           </a>
         </mat-nav-list>
@@ -164,10 +164,10 @@
           <span>Room Allotment</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item [routerLink]="'/room-allotment'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/room-allotment'">
             <span>Room Allotment list</span>
           </a>
-          <a mat-list-item [routerLink]="'/room-allotment/new'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/room-allotment/new'">
             <span>New Room Allotment</span>
           </a>
         </mat-nav-list>
@@ -185,10 +185,10 @@
           <span>Patients</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item [routerLink]="'/patients'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/patients'">
             <span>Patients list</span>
           </a>
-          <a mat-list-item [routerLink]="'/patients/new'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/patients/new'">
             <span>New Patients</span>
           </a>
         </mat-nav-list>
@@ -206,10 +206,10 @@
           <span>Payments</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-list-item [routerLink]="'/payments'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/payments'">
             <span>Payments list</span>
           </a>
-          <a mat-list-item [routerLink]="'/payments/new'">
+          <a mat-list-item [routerLink]="'/dashboard/screens/payments/new'">
             <span>New Payments</span>
           </a>
         </mat-nav-list>

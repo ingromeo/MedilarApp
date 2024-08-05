@@ -23,14 +23,13 @@ export class AuthComponent {
   constructor( private router: Router) {}
 
   login() {
+    this.router.navigateByUrl('/dashboard/screens/appointments');
 
-    if (this.email === "firu" && this.password === "firu") {
-      this.router.navigateByUrl('/dashboard/student/studentCreate');
+    /*if (this.email === "firu") {
+      this.router.navigateByUrl('/dashboard/screens/appointments');
     } else {
       this.dialog.open(DialogElementsExampleDialog);
-      console.log(this.email);
-      console.log(this.password);
-    }
+    }*/
 
   }
 

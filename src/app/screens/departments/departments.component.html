@@ -1,6 +1,6 @@
 <div class="row justify-content-between align-items-baseline">
   <div class="col-md-2">
-    <button mat-raised-button [routerLink]="['/departments/new']">
+    <button mat-raised-button [routerLink]="['/dashboard/screens/departments/new']">
       <mat-icon>add</mat-icon>
       Add new
     </button>
@@ -46,7 +46,7 @@
         <button
           mat-icon-button
           color="primary"
-          [routerLink]="['/departments', element.id]"
+          [routerLink]="['/dashboard/screens/departments', element.id]"
         >
           <mat-icon>edit</mat-icon>
         </button>

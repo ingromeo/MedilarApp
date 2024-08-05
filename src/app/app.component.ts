@@ -15,6 +15,7 @@ import { ActivatedRoute, Router, ActivationEnd } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent /*implements OnDestroy, OnInit*/ {
+  title = 'academia';
   // mobileQuery: MediaQueryList;
   // private _mobileQueryListener: () => void;
   // // @ViewChild('sidenav', { static: false }) sidenav: MatSidenav | undefined;
