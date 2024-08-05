@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Item deletion</h2>
+<mat-dialog-content class="mat-typography">
+    <p><strong>Are you sure you want to delete <span class="text-primary">this item</span>?</strong></p>
+    <p>All information associated to this item will be permanently deleted.
+        <span class="text-danger">This operation can not be undone.</span>
+    </p>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirm</button>
+</mat-dialog-actions>

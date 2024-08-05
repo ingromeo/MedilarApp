@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+// regular style toast
+@import "ngx-toastr/toastr";
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+table {
+  width: 100%;
+}
+.text-color-theme {
+  color: #1a73e8;
+}
+.dashboard-content {
+  height: 88vh;
+  padding: 20px;
+}
+.content {
+  margin: 0 auto;
+  align-items: center;
+  max-width: 600px;
+  padding-bottom: 32px;
+  mat-card {
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  }
+  .mat-card-actions {
+    display: table-cell;
+    padding: 20px 0;
+  }
+  .mat-form-field {
+    display: block;
+  }
+  mat-card-title {
+    margin-bottom: 20px;
+  }
+  .mat-card-content {
+    margin-top: 20px;
+  }
+  .mat-radio-button {
+    margin: 0 12px;
+  }
+}
+.form-content {
+  margin: 0 auto;
+}
+.mat-mdc-form-field {
+  width: 100%;
+}
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+  background-color: transparent;
+}
+.menu-spacer {
+  flex: 1 1 auto;
+}
+.mat-form-field-invalid .mat-icon {
+  color: #f44336;
+}
+.actions-btns {
+  min-width: 150px;
+  button {
+    margin: 3px;
+  }
+}
+
+.mat-mdc-table .mat-mdc-row:hover,
+.mat-mdc-table .mat-mdc-footer-row:hover {
+  background-color: #fafafa !important;
+}
+
+// Menu style
+.main-navbar {
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+  background: #c0bfc0;
+}
+.mat-toolbar.mat-primary {
+  background: #e1dfe1;
+  color: #050505;
+}
+
+.page-header button {
+  color: #1a73e8;
+}
+
+.mat-sidenav .mat-expansion-panel-header {
+  padding: 0 14px;
+  .mat-icon {
+    margin: 0 4px;
+  }
+}
+.mat-sidenav .mat-icon {
+  color: #1a73e8;
+}
+.mat-sidenav .mat-expansion-panel-header.mat-expanded {
+  height: 48px;
+}
+.mat-sidenav .mat-expansion-panel-header {
+  padding: 0 10px;
+  line-height: 40px;
+  .mat-expansion-indicator {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .mat-icon {
+    margin: 6px 4px;
+  }
+}
+.mat-mdc-list-item-unscoped-content {
+  display: flex;
+  .mat-icon {
+    padding-right: 3px;
+  }
+}

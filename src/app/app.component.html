@@ -1,0 +1,236 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="main-navbar">
+    <h1 class="text-color-theme">Medilar</h1>
+    <small class="mx-2">Hospital, Clinic and Medical Angular dashboard</small>
+    <span class="menu-spacer"></span>
+    <!-- <a
+      href="https://codecanyon.net/item/hospital-clinic-and-medical-angular-dashboard/42805120?ref=abharwork"
+      target="_blank"
+      mat-button
+      ><b>Buy the item</b></a
+    > -->
+    <a
+      href="https://abharworks.com/store/medilar/docs/index.html"
+      target="_blank"
+      mat-button
+      >Docs</a
+    >
+
+    <!-- Start icons links -->
+    <button mat-icon-button aria-label="Go to searching page">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Go to notifications page">
+      <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>person</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Open dropdown menu for extra links"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+    <!-- End icons links -->
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="page-header">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span style="font-size: 22px;">{{ pageTitle }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    [opened]="true"
+    [mode]="!mobileQuery.matches ? 'side' : 'over'"
+    [fixedInViewport]="mobileQuery.matches"
+    fixedTopGap="112"
+    style="width: 240px;"
+  >
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/dashboard'">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+
+      <!-- Appointments routes -->
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon>book_online</mat-icon>
+          <span>Appointments</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/appointments'">
+            <span>Appointments list</span>
+          </a>
+          <a mat-list-item [routerLink]="'/appointments/new'">
+            <span>New Appointment</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- // Appointments routes -->
+
+      <!-- DoctorsDepartments routes -->
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon
+            ><span class="material-symbols-outlined">
+              clinical_notes
+            </span></mat-icon
+          >
+          <span>Doctors</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/doctors'">
+            <span>Doctors list</span>
+          </a>
+          <a mat-list-item [routerLink]="'/doctors/new'">
+            <span>New Doctor</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- // Doctors routes -->
+
+      <!-- Departments routes -->
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon
+            ><span class="material-symbols-outlined">
+              stethoscope
+            </span></mat-icon
+          >
+          <span>Departments</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/departments'">
+            <span>Departments list</span>
+          </a>
+          <a mat-list-item [routerLink]="'/departments/new'">
+            <span>New Departments</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- // Departments routes -->
+
+      <!-- Staff routes -->
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon
+            ><span class="material-symbols-outlined">
+              groups_3
+            </span></mat-icon
+          >
+          <span>Staff</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/staff'">
+            <span>Staff list</span>
+          </a>
+          <a mat-list-item [routerLink]="'/staff/new'">
+            <span>New Staff</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- // Staff routes -->
+
+      <!-- Room Allotment routes -->
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon
+            ><span class="material-symbols-outlined">
+              moving_ministry
+            </span></mat-icon
+          >
+          <span>Room Allotment</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/room-allotment'">
+            <span>Room Allotment list</span>
+          </a>
+          <a mat-list-item [routerLink]="'/room-allotment/new'">
+            <span>New Room Allotment</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- // Room Allotment routes -->
+
+      <!-- Patients routes -->
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon
+            ><span class="material-symbols-outlined">
+              patient_list
+            </span></mat-icon
+          >
+          <span>Patients</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/patients'">
+            <span>Patients list</span>
+          </a>
+          <a mat-list-item [routerLink]="'/patients/new'">
+            <span>New Patients</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- // Patients routes -->
+
+      <!-- Payments routes -->
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon
+            ><span class="material-symbols-outlined">
+              payments
+            </span></mat-icon
+          >
+          <span>Payments</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="'/payments'">
+            <span>Payments list</span>
+          </a>
+          <a mat-list-item [routerLink]="'/payments/new'">
+            <span>New Payments</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <!-- // Payments routes -->
+
+      <span class="menu-spacer"></span>
+      <mat-divider></mat-divider>
+      <a
+        mat-list-item
+        href="https://abharworks.com/store/mat-table-crud/docs/index.html"
+        target="_blank"
+      >
+        <mat-icon>integration_instructions</mat-icon>
+        Docs
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="dashboard-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
