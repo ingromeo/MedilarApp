@@ -8,6 +8,8 @@ import {
   MatDialogContent, MatDialogModule,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-auth',
@@ -16,14 +18,29 @@ import {
 })
 export class AuthComponent {
 
-  email: string = "";
-  password: string = "";
+  //email: string = "";
+  //password: string = "";
+
+  private fb          = inject( FormBuilder );
+  private authService = inject( AuthService );
+
   readonly dialog = inject(MatDialog);
 
   constructor( private router: Router) {}
 
+  public  myForm: FormGroup = this.fb.group({
+    email:    ['', [ Validators.required, Validators.email ]],
+    password: ['', [ Validators.required, Validators.minLength(6) ]]
+  });
+
   login() {
+    const {email, password} = this.myForm.value;
     this.router.navigateByUrl('/dashboard/screens/appointments');
+
+    this.authService.login(email, password)
+      .subscribe(success => {
+        console.log(success)
+      })
 
     /*if (this.email === "firu") {
       this.router.navigateByUrl('/dashboard/screens/appointments');

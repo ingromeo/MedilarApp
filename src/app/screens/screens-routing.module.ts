@@ -20,121 +20,121 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-  path: '',
-  component: DashboardComponent,
-  data: { title: 'Dashboard' }
-},
-{
-  path: 'dashboard',
-  component: DashboardComponent,
-  data: { title: 'Dashboard' }
-},
-{
-  path: 'appointments',
-  component: AppointmentsComponent,
-  data: { title: 'Appointments' }
-},
-{
-  path: 'appointments/new',
-  component: AppointmentsViewComponent,
-  data: { title: 'New appointment' }
-},
-{
-  path: 'appointments/:id',
-  component: AppointmentsViewComponent,
-  data: { title: 'Update appointments' }
-},
+    path: '',
+    component: DashboardComponent,
+    data: { title: 'Dashboard' }
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    data: { title: 'Dashboard' }
+  },
+  {
+    path: 'appointments',
+    component: AppointmentsComponent,
+    data: { title: 'Appointments' }
+  },
+  {
+    path: 'appointments/new',
+    component: AppointmentsViewComponent,
+    data: { title: 'New appointment' }
+  },
+  {
+    path: 'appointments/:id',
+    component: AppointmentsViewComponent,
+    data: { title: 'Update appointments' }
+  },
 
-{
-  path: 'doctors',
-  component: DoctorsComponent,
-  data: { title: 'Doctors' }
-},
-{
-  path: 'doctors/new',
-  component: DoctorsViewComponent,
-  data: { title: 'New doctor' }
-},
-{
-  path: 'doctors/:id',
-  component: DoctorsViewComponent,
-  data: { title: 'Update doctor' }
-},
-{
-  path: 'departments',
-  component: DepartmentsComponent,
-  data: { title: 'Departments' }
-},
-{
-  path: 'departments/new',
-  component: DepartmentsViewComponent,
-  data: { title: 'New Departments' }
-},
-{
-  path: 'departments/:id',
-  component: DepartmentsViewComponent,
-  data: { title: 'Update Departments' }
-},
-{
-  path: 'staff',
-  component: StaffComponent,
-  data: { title: 'Staff list' }
-},
-{
-  path: 'staff/new',
-  component: StaffViewComponent,
-  data: { title: 'New staff' }
-},
-{
-  path: 'staff/:id',
-  component: StaffViewComponent,
-  data: { title: 'Update staff' }
-},
-{
-  path: 'room-allotment',
-  component: RoomAllotmentComponent,
-  data: { title: 'Room allotment' }
-},
-{
-  path: 'room-allotment/new',
-  component: RoomAllotmentViewComponent,
-  data: { title: 'New room allotment' }
-},
-{
-  path: 'room-allotment/:id',
-  component: RoomAllotmentViewComponent,
-  data: { title: 'Update room allotment' }
-},
-{
-  path: 'patients',
-  component: PatientsComponent,
-  data: { title: 'Patients' }
-},
-{
-  path: 'patients/new',
-  component: PatientsViewComponent,
-  data: { title: 'New patients' }
-},
-{
-  path: 'patients/:id',
-  component: PatientsViewComponent,
-  data: { title: 'Update patients' }
-},
-{
-  path: 'payments',
-  component: PaymentsComponent,
-  data: { title: 'Payments' }
-},
-{
-  path: 'payments/new',
-  component: PaymentsViewComponent,
-  data: { title: 'New payments' }
-},
-{
-  path: 'payments/:id',
-  component: PaymentsViewComponent,
-  data: { title: 'Update payments' }
-}
+  {
+    path: 'doctors',
+    component: DoctorsComponent,
+    data: { title: 'Doctors' }
+  },
+  {
+    path: 'doctors/new',
+    component: DoctorsViewComponent,
+    data: { title: 'New doctor' }
+  },
+  {
+    path: 'doctors/:id',
+    component: DoctorsViewComponent,
+    data: { title: 'Update doctor' }
+  },
+  {
+    path: 'departments',
+    component: DepartmentsComponent,
+    data: { title: 'Departments' }
+  },
+  {
+    path: 'departments/new',
+    component: DepartmentsViewComponent,
+    data: { title: 'New Departments' }
+  },
+  {
+    path: 'departments/:id',
+    component: DepartmentsViewComponent,
+    data: { title: 'Update Departments' }
+  },
+  {
+    path: 'staff',
+    component: StaffComponent,
+    data: { title: 'Staff list' }
+  },
+  {
+    path: 'staff/new',
+    component: StaffViewComponent,
+    data: { title: 'New staff' }
+  },
+  {
+    path: 'staff/:id',
+    component: StaffViewComponent,
+    data: { title: 'Update staff' }
+  },
+  {
+    path: 'room-allotment',
+    component: RoomAllotmentComponent,
+    data: { title: 'Room allotment' }
+  },
+  {
+    path: 'room-allotment/new',
+    component: RoomAllotmentViewComponent,
+    data: { title: 'New room allotment' }
+  },
+  {
+    path: 'room-allotment/:id',
+    component: RoomAllotmentViewComponent,
+    data: { title: 'Update room allotment' }
+  },
+  {
+    path: 'patients',
+    component: PatientsComponent,
+    data: { title: 'Patients' }
+  },
+  {
+    path: 'patients/new',
+    component: PatientsViewComponent,
+    data: { title: 'New patients' }
+  },
+  {
+    path: 'patients/:id',
+    component: PatientsViewComponent,
+    data: { title: 'Update patients' }
+  },
+  {
+    path: 'payments',
+    component: PaymentsComponent,
+    data: { title: 'Payments' }
+  },
+  {
+    path: 'payments/new',
+    component: PaymentsViewComponent,
+    data: { title: 'New payments' }
+  },
+  {
+    path: 'payments/:id',
+    component: PaymentsViewComponent,
+    data: { title: 'Update payments' }
+  }
 ];
 
 @NgModule({
